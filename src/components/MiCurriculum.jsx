@@ -37,7 +37,6 @@ function MiCurriculum() {
             2016-Abril de 2019- Tecnicatura aprobada con 86% Tec. Gerencia
             Turistica Full Stack Developer
           </p>
-          {/* Otros */}
 
           <h3> Universidad ORT</h3>
           <h4>Tec. Gerencia Turistica</h4>

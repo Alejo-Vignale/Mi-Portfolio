@@ -7,10 +7,13 @@ import Proyectos from "./Proyectos";
 import Contacto from "./Contacto";
 import MiCurriculum from "./MiCurriculum";
 import Footer from "./Footer";
+import StartComponent from "./StartComponent";
 
 function Home() {
   const [selectedContent, setSelectedContent] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
+
+ 
 
   const handleIconClick = (content) => {
     switch (content) {
