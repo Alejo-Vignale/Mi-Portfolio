@@ -1,0 +1,68 @@
+
+
+.curriculum-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Gotham', sans-serif;
+  }
+  
+  .left-section {
+    flex: 1;
+    max-width: 30%;
+    padding: 10px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.366)), url('/left.jpg');
+    color: black;
+  text-shadow: 0 0 10px rgba(54, 54, 54, 0.603), 0px 0px 1px rgba(0, 0, 0, 0.5); 
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .right-section {
+    flex: 1;
+    max-width: 70%;
+    overflow-y: auto;
+    background: #979696;
+  }
+  .right-scrollable {
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+
+  }
+  .image-container {
+
+    border: 4px black solid;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 200px; 
+    height: 200px; 
+    background-image: url('/foto.cv.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .image-container img {
+
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+  }
+  
+  .description {
+    margin-bottom: 20px;
+  }
+  
+  .personal-info {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #979696;
+    
+  }
+  
+  .info-section {
+    margin-bottom: 20px;
+  }
+  
+  
