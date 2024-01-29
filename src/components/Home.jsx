@@ -4,16 +4,15 @@ import icon1 from "../assets/iconDisc.png";
 import icon2 from "../assets/iconFolder.png";
 import icon3 from "../assets/iconPc.png";
 import Proyectos from "./Proyectos";
-import Contacto from "./Contacto";
 import MiCurriculum from "./MiCurriculum";
 import Footer from "./Footer";
 import StartComponent from "./StartComponent";
+import Modal from "./Modal";
 
 function Home() {
   const [selectedContent, setSelectedContent] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
-
- 
+  const [openModal, setOpenModal] = useState(false);
 
   const handleIconClick = (content) => {
     switch (content) {
@@ -21,7 +20,7 @@ function Home() {
         setSelectedContent(<Proyectos />);
         break;
       case "Contacto":
-        setSelectedContent(<Contacto />);
+        setOpenModal(true);
         break;
       case "MiCurriculum":
         setSelectedContent(<MiCurriculum />);
@@ -32,6 +31,12 @@ function Home() {
 
     setShowVideo(false);
   };
+
+  const closeModal = () => {
+    console.log("Closing modal...");
+    setOpenModal(false);
+  };
+  
 
   return (
     <section className="layout">
@@ -63,18 +68,21 @@ function Home() {
                 <img src={icon3} alt="Icon 3" />
               </div>
             </div>
-            <div className="center-container">
-              <div className="consoleMain">
-                <div className="consoleBlue"> Welcome</div>
-                <div className="consoleBox">{selectedContent}</div>
+            {selectedContent && (
+              <div className="center-container">
+                <div className="consoleMain">
+                  <div className="consoleBlue"> Welcome</div>
+                  <div className="consoleBox">{selectedContent}</div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <Footer />
         </div>
       </div>
       <div className="rightSide"></div>
       <div className="bottom"></div>
+      <Modal open={openModal} closeModal={closeModal} />
     </section>
   );
 }

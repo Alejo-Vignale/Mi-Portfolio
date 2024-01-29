@@ -13,7 +13,12 @@
     width: 100%;
     padding: 20px;
 }
-
+.modal-background.open,
+.modal-content.open {
+  display: flex; /* Displayed when open */
+  justify-content: center;
+  align-items: center;
+}
 .contactBox {
     background: grey;
     box-shadow: -11px 8px 5px 1px rgba(0,0,0,0.75);
@@ -51,15 +56,25 @@ textarea {
     height: 150px;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4caf50;
-    color: white;
-    cursor: pointer;
-}
-
 button:hover {
     background-color: #45a049;
 }
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  

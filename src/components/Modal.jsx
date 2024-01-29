@@ -1,28 +1,36 @@
-// Contacto.jsx
 import React, { useState } from "react";
 import "./CSS/Contacto.css";
 
-function Contacto() {
+function Modal({ open, closeModal }) {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add logic to handle form submission, like sending an email
     console.log("Email:", email);
     console.log("Subject:", subject);
     console.log("Message:", message);
-    // Clear form fields after submission
     setEmail("");
     setSubject("");
     setMessage("");
+    closeModal();
   };
 
   return (
-    <div className="contacto-padre">
-      <h2>Contact Me</h2>
-      <div className="contactBox">
+    <div className={`modal-background ${open ? "open" : ""}`}>
+      <div className="modal-content">
+        <button
+          className="close-button"
+          onClick={() => {
+            closeModal();
+            console.log("Modal closed");
+          }}
+        >
+          Close
+        </button>
+
+        <h2>Contact Me</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group email-input">
             <label htmlFor="email">Your Email:</label>
@@ -60,4 +68,4 @@ function Contacto() {
   );
 }
 
-export default Contacto;
+export default Modal;
