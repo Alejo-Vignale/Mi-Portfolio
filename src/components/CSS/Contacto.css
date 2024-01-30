@@ -1,38 +1,30 @@
-/* Contacto.css */
-.contacto-padre {
-    height: 100%;
-    background-image:linear-gradient(rgba(255, 255, 255, 0.024), rgba(255, 255, 255, 0.314)), url('../../assets/paper1.jpg');
- 
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-}
+
 .modal-background.open,
 .modal-content.open {
   display: flex; /* Displayed when open */
   justify-content: center;
   align-items: center;
+  
+  animation-name: scale-up-center;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+      
+  /* shorthand
+  animation: scale-up-center 1.2s linear 0s 1 normal none;*/
 }
-.contactBox {
-    background: grey;
-    box-shadow: -11px 8px 5px 1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: -11px 8px 5px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -11px 8px 5px 1px rgba(0,0,0,0.75);
-    border: 4px ridge #979696;
-    width: 600px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@keyframes scale-up-center {
+			
+    0% {
+        transform:scale(.2);
+    }
+    100% {
+        transform:scale(1);
+    }
 }
-
 .form-group {
     margin-bottom: 20px;
 }
