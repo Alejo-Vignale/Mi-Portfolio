@@ -1,7 +1,29 @@
-
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+  .modal-content {
+    height: 550px;
+    width: 550px;
+    background-color:#c0c0c0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    font-family: 'Arial', sans-serif; 
+    font-size: 12px; 
+  }
 .modal-background.open,
 .modal-content.open {
-  display: flex; /* Displayed when open */
+  display: flex; 
   justify-content: center;
   align-items: center;
   
@@ -12,9 +34,7 @@
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: none;
-      
-  /* shorthand
-  animation: scale-up-center 1.2s linear 0s 1 normal none;*/
+ 
 }
 @keyframes scale-up-center {
 			
@@ -33,17 +53,41 @@ label {
     display: block;
     font-weight: bold;
 }
-
-input[type="email"],
-input[type="text"],
-textarea {
-    width: 400px;
-    padding: 10px;
+.modal-content input[type="email"],
+.modal-content input[type="text"],
+.modal-content textarea {
+    width: calc(100% - 40px); 
+    height: 40px; 
+    padding: 10px; 
+    margin-bottom: 5px; 
     border: 1px solid black;
     border-radius: 5px;
     background-color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: black;
 }
 
+.modal-content textarea {
+    height: 150px;
+}
+
+.modal-content button {
+    padding: 10px 20px; 
+    font-size: 14px;
+}
+
+  .email-box .modal-content button {
+    padding: 5px 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px; 
+    border: 2px solid #000;
+    background-color: #c0c0c0;
+    color: #000; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
 textarea {
     height: 150px;
 }
@@ -51,22 +95,19 @@ textarea {
 button:hover {
     background-color: #45a049;
 }
-.modal-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
+  
+  .modal-content.closing {
+    animation-name: scale-down-center;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
   }
   
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+  @keyframes scale-down-center {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.2);
+    }
   }
-  
