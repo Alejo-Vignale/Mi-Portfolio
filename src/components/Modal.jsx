@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { AiOutlineCloseSquare } from "react-icons/ai"; // Importing the close icon
 import "./CSS/Contacto.css";
-
-
 
 function Modal({ open, closeModal }) {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [closing, setClosing] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email:", email);
@@ -25,13 +25,17 @@ function Modal({ open, closeModal }) {
   };
 
   return (
-    
-      <div className={`modal-background ${open ? "open" : ""}`}>
-        <div className={`modal-content ${closing ? "closing" : ""}`}>
-          <button className="close-button" onClick={() => closeModal()}>
-            Close
-          </button>
-
+    <div className={`modal-background ${open ? "open" : ""}`}>
+      <div className={`modal-content ${closing ? "closing" : ""}`}>
+        <div className="modal-header">
+          <div className="close-button-wrapper">
+            <button className="close-button" onClick={() => closeModal()}>
+              <AiOutlineCloseSquare className="close-icon" />
+            </button>
+          </div>
+        </div>
+        <div className="header-divider" />
+        <div className="form-content">
           <h2>Contact Me</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group email-input">
@@ -63,11 +67,13 @@ function Modal({ open, closeModal }) {
                 required
               />
             </div>
-            <button type="submit">Send</button>
+            <button className="sendButton" type="submit">
+              Send
+            </button>
           </form>
         </div>
       </div>
-
+    </div>
   );
 }
 

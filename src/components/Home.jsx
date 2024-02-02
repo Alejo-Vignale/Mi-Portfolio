@@ -9,6 +9,8 @@ import Footer from "./Footer";
 import StartComponent from "./StartComponent";
 import Modal from "./Modal";
 
+import { AiOutlineCloseSquare } from "react-icons/ai";
+
 function Home() {
   const [selectedContent, setSelectedContent] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
@@ -36,7 +38,6 @@ function Home() {
     console.log("Closing modal...");
     setOpenModal(false);
   };
-  
 
   return (
     <section className="layout">
