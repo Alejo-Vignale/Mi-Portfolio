@@ -58,6 +58,9 @@
         transform:scale(1);
     }
 }
+.form-content{
+  padding: 20px;
+}
 .form-group {
     margin-bottom: 20px;
 }
