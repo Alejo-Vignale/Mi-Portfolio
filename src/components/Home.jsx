@@ -20,19 +20,22 @@ function Home() {
     switch (content) {
       case "Proyectos":
         setSelectedContent(<Proyectos />);
+        setOpenModal(false);
         break;
       case "Contacto":
         setOpenModal(true);
         break;
       case "MiCurriculum":
         setSelectedContent(<MiCurriculum />);
+        setOpenModal(false);
         break;
       default:
         setSelectedContent(null);
     }
-
+  
     setShowVideo(false);
   };
+  
 
   const closeModal = () => {
     console.log("Closing modal...");
