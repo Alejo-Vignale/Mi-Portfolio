@@ -17,25 +17,27 @@ function Home() {
   const [openModal, setOpenModal] = useState(false);
 
   const handleIconClick = (content) => {
+    // Close any opened content in the console
+    setSelectedContent(null);
+    // Close the modal
+    setOpenModal(false);
+
     switch (content) {
       case "Proyectos":
         setSelectedContent(<Proyectos />);
-        setOpenModal(false);
         break;
       case "Contacto":
         setOpenModal(true);
         break;
       case "MiCurriculum":
         setSelectedContent(<MiCurriculum />);
-        setOpenModal(false);
         break;
       default:
         setSelectedContent(null);
     }
-  
+
     setShowVideo(false);
   };
-  
 
   const closeModal = () => {
     console.log("Closing modal...");
