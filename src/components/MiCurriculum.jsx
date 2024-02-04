@@ -37,7 +37,7 @@ function MiCurriculum() {
             {/* EDUCACIÓN section */}
             <h2>EDUCACIÓN</h2>
             {/* Download button */}
-            <button onClick={handleDownloadClick}>Download</button>
+            <button onClick={handleDownloadClick}>Download C.V</button>
           </div>
 
           <h3> Hack Academy</h3>

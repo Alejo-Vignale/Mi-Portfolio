@@ -67,11 +67,17 @@
 
 .education-download-section {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
-
+.education-download-section button {
+  height:30px ;
+  font-size: 15px;
+  color: black;
+  font-weight: 600;
+  margin-left: 140px;
+  background: rgb(207, 5, 5);
+}
 .education-download-section h2 {
   margin: 0;
 }
