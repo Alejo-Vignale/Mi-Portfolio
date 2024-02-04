@@ -1,21 +1,7 @@
 .proyectos-padre {
     position: relative;
-    height: 100%; /* Set the height as needed */
-    overflow: hidden;
-  }
-  
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    background: #979696;
     height: 100%;
-    object-fit: contain;
-  }
-  
-  .proyectos-padre > div {
-    position: relative;
-    z-index: 1; /* Ensure that the content is above the video */
-    color: white; /* Set text color as needed */
+    overflow: hidden;
   }
   
