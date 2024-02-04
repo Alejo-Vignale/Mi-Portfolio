@@ -73,10 +73,17 @@
 .education-download-section button {
   height:30px ;
   font-size: 15px;
+  margin: black solid 4px;
   color: black;
   font-weight: 600;
   margin-left: 140px;
   background: rgb(207, 5, 5);
+  cursor: pointer;
+}
+.education-download-section button:hover {
+
+  color: rgb(190, 190, 190);
+
 }
 .education-download-section h2 {
   margin: 0;

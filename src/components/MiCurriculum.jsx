@@ -3,11 +3,9 @@ import React from "react";
 import "./CSS/MiCurriculum.css";
 function MiCurriculum() {
   const handleDownloadClick = () => {
-    // Replace 'your_cv_file_name.pdf' with the actual name of your CV file
     const fileName = "your_cv_file_name.pdf";
-    // Replace 'path/to/your/cv' with the actual path to your CV file
     const filePath = "path/to/your/cv/" + fileName;
-    // Triggering the download
+
     window.open(filePath);
   };
   return (
@@ -34,10 +32,8 @@ function MiCurriculum() {
       <div className="right-section">
         <div className="personal-info">
           <div className="education-download-section">
-            {/* EDUCACIÓN section */}
             <h2>EDUCACIÓN</h2>
-            {/* Download button */}
-            <button onClick={handleDownloadClick}>Download C.V</button>
+            <button onClick={handleDownloadClick}>Download C.V .pdf</button>
           </div>
 
           <h3> Hack Academy</h3>
