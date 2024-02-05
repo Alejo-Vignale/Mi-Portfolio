@@ -2,12 +2,43 @@ import React from "react";
 import "./CSS/Proyectos.css";
 
 function Proyectos() {
+  
   const projects = [
     {
       name: "Weather APp",
       description:
         "Html, Css, JS and the use of an API to have the weather information you need",
       url: "https://weather-app-rho-flame-43.vercel.app/",
+    },
+    {
+      name: "Project 2",
+      description: "Description of Project 2",
+      url: "https://example.com/project2",
+    },
+    {
+      name: "Project 2",
+      description: "Description of Project 2",
+      url: "https://example.com/project2",
+    },
+    {
+      name: "Project 2",
+      description: "Description of Project 2",
+      url: "https://example.com/project2",
+    },
+    {
+      name: "Project 2",
+      description: "Description of Project 2",
+      url: "https://example.com/project2",
+    },
+    {
+      name: "Project 2",
+      description: "Description of Project 2",
+      url: "https://example.com/project2",
+    },
+    {
+      name: "Project 2",
+      description: "Description of Project 2",
+      url: "https://example.com/project2",
     },
     {
       name: "Project 2",
