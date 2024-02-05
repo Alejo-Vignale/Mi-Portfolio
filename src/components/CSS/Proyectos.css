@@ -6,6 +6,9 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+.project-folder{
+  margin: 25px;
+}
 .project-folder img {
   width: 100px;
   height: 100px;
