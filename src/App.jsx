@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Modal from "./components/Modal"
-import MiCurriculum from "./components/MiCurriculum"
-import Proyectos from "./components/Proyectos"
+import Modal from "./components/Modal";
+import MiCurriculum from "./components/MiCurriculum";
+import Proyectos from "./components/Proyectos";
 import Home from "./components/Home";
 
 function App() {

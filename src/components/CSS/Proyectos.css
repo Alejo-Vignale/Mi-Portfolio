@@ -8,6 +8,8 @@
 }
 .project-folder{
   margin: 25px;
+  position: relative;
+  z-index: 1;
 }
 .project-folder img {
   width: 100px;
@@ -18,10 +20,22 @@
   margin: 5px 0;
 }
 
-.project-folder p {
-  display: none;
+.project-folder .info-container {
+  display: none; 
+  font-size: 1.2rem;
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+  background: rgb(224, 223, 223);
+  border: 3px solid black;
+  width: 150px;
+  height: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 55555; 
 }
 
-.project-folder:hover p {
+.project-folder:hover .info-container {
   display: block;
 }
