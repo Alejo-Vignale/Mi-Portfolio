@@ -23,6 +23,7 @@
 .project-folder .info-container {
   display: none; 
   font-size: 1.2rem;
+  top: -1px;
   position: absolute;
   left: 50%;
 
