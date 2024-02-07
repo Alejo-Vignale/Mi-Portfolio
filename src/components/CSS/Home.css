@@ -75,17 +75,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
   
   .consoleMain {
     margin: 60px;
     padding: 0px;
-    border-top: 4px ridge #979696;
-    border-right: 4px ridge #979696;
-    border-bottom: 4px ridge #979696;
-    border-left: 4px ridge #979696;
+    border: 4px ridge #979696;
     overflow-y: auto;
-    
+    position: relative; /* Ensure z-index works */
+    z-index: 1; /* Set a lower z-index */
   }
   .consoleBox {
     height: 60vh;

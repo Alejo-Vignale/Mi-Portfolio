@@ -5,8 +5,9 @@
   background: #979696;
   flex-wrap: wrap;
   justify-content: flex-start;
+  overflow: auto;
 }
-.project-folder{
+.project-folder {
   margin: 25px;
   position: relative;
   z-index: 1;
@@ -21,22 +22,49 @@
 }
 
 .project-folder .info-container {
-  display: none; 
+  width: 350px;
+  height: 400px;
+  padding: 10px;
+  margin: 10px;
+  display: none;
   font-size: 1.2rem;
   top: -1px;
-  position: absolute;
-  left: 50%;
 
+  left: 50%;
   transform: translateX(-50%);
   background: rgb(224, 223, 223);
-  border: 3px solid black;
-  width: 150px;
-  height: 300px;
-  padding: 10px;
+  border: 1px solid black;
   box-sizing: border-box;
-  z-index: 55555; 
+  position: absolute;
+  z-index: 1000;
+  overflow: auto;
+}
+.project-folder:hover {
+  z-index: 2; /* Increase z-index when hovered */
+}
+.project-folder .info-container {
+  width: 350px;
+  height: 400px;
+  padding: 10px;
+  margin: 10px;
+  display: none;
+  font-size: 1.2rem;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(224, 223, 223);
+  border: 1px solid black;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1; /* Set a default z-index */
+  overflow: auto;
 }
 
 .project-folder:hover .info-container {
   display: block;
+  z-index: 1000; /* Ensure the hovered container is above other elements */
+}
+.info-container img {
+  width: 100%;
+  height: 300px;
 }
