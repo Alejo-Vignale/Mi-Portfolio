@@ -42,11 +42,12 @@
   background-image: url('/foto.cv.jpg');
   background-size: cover;
   background-position: center;
+ 
 }
 
 .image-container img {
-  width: 100px; 
-  height: 100px; 
+  width: 100px;
+  height: 100px;
   object-fit: cover;
 }
 
